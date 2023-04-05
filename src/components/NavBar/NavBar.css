@@ -1,0 +1,97 @@
+.nav {
+  width: 100%;
+  height: 4.3em;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 0.8px 0.5px #0000001d;
+  /* filter: drop-shadow(0px 0px 5px #000); */
+  z-index: 50;
+}
+
+.logo {
+  object-fit: cover;
+  filter: brightness(1);
+  border-radius: 50%;
+  margin-top: 9px;
+  width: 50px;
+  height: 50px;
+}
+
+.nav__div-logo {
+  display: inline-block;
+  position: fixed;
+  left: 1%;
+}
+
+.icons-container {
+  display: flex;
+  width: 60px;
+  position: fixed;
+  right: 15%;
+  top: 4.5%;
+}
+
+.icon-fav,
+.icon-cart,
+.icon-person {
+  position: absolute;
+  top: 31%;
+}
+
+.icon-fav {
+  right: 9%;
+}
+
+.icon-cart {
+  right: 13%;
+}
+
+.icon-person {
+  right: 5%;
+}
+
+hr {
+  margin-top: 1%;
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav__buttonNav {
+    visibility: hidden;
+    position: absolute;
+    top: 100em;
+  }
+}
+
+.initial {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.initial .active {
+  border-radius: 0 0 90% 0;
+  transition: all 0.7s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+
+@media (min-width: 600px) {
+  .burguer {
+    display: none;
+    z-index: 50;
+  }
+}

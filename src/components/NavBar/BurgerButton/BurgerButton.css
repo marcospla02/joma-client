@@ -1,0 +1,41 @@
+.buttonBg {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
+.buttonBg__container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 4.3em;
+  height: 100vh;
+  background-color: #000;
+  color: #fafafa;
+  width: 9em;
+  transition: all 1s;
+}
+
+.buttonBg__container a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.active {
+  animation-name: Lateral;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes Lateral {
+  100% {
+    transform: translateX(0);
+  }
+
+  0% {
+    transform: translateX(90px);
+  }
+}
