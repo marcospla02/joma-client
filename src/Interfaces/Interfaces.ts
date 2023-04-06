@@ -6,6 +6,7 @@ export interface Products {
   stock: number;
   enabled: boolean;
   image: Image;
+  category: Categories;
 }
 
 export interface Users {
@@ -20,4 +21,11 @@ export interface Users {
 export interface Image {
   name: string;
   url: string;
+}
+
+export interface Categories {
+  name: string;
+}
+export interface Info {
+  info: Products[];
 }

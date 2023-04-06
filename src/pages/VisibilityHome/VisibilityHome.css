@@ -1,0 +1,23 @@
+.visibility {
+  visibility: hidden;
+  position: absolute;
+  top: -1000px;
+}
+
+.button-redirect {
+  display: flex;
+  position: relative;
+  left: 90%;
+  top: -250px;
+}
+
+.visibility-container {
+  margin-top: 55px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title-visibility {
+  border-bottom: 2px solid var(--blue-ui);
+  display: inline-block;
+}

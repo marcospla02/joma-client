@@ -12,13 +12,13 @@ const Carrousel = ({ images }: Image) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrevOrNext(selectedIndex, images);
-    }, 2000);
+      setPrevOrNext(images);
+    }, 3000);
 
     return () => clearInterval(interval);
   });
 
-  const setPrevOrNext = (index: number, images: string[], next = true) => {
+  const setPrevOrNext = (images: string[], next = true) => {
     setLoaded(false);
 
     setTimeout(() => {
@@ -34,15 +34,15 @@ const Carrousel = ({ images }: Image) => {
         : images.length - 1;
       setSelectedImage(images[nextIndex]);
       setSelectedIndex(nextIndex);
-    }, 500);
+    }, 400);
   };
 
   const prev = () => {
-    setPrevOrNext(selectedIndex, images, false);
+    setPrevOrNext(images, false);
   };
 
   const next = () => {
-    setPrevOrNext(selectedIndex, images);
+    setPrevOrNext(images);
   };
 
   return (

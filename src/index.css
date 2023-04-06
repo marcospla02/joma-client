@@ -10,6 +10,7 @@
   --white-grey: #bcc0c1;
 
   --figma-color: #3fa8e905;
+  --tigger-coffe: #2b2b2b;
   /* --light-blue: #e7ebf0; */
   --light-blue: #f6f6f6;
 
@@ -27,7 +28,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0px;
   display: flex;
   place-items: center;
   min-width: 320px;

@@ -17,10 +17,9 @@ const CardProduct = ({ name, stock, description, price, image }: Products) => {
   return (
     <Card
       sx={{
-        width: 235,
+        width: 250,
         marginRight: "20px",
         marginBottom: "20px",
-        boxShadow: "2px 2px 10px  black",
       }}
     >
       <CardHeader
@@ -33,11 +32,19 @@ const CardProduct = ({ name, stock, description, price, image }: Products) => {
       />
       <CardMedia
         component="img"
-        height="200"
-        image={image.url}
+        height="224"
+        image={
+          image !== null && image.url
+            ? image.url
+            : "https://www.coretech.com.ar/wp-content/uploads/2022/08/sin-imagen-358.png"
+        }
         alt="imagenes de los bancos"
-        sx={{ objectFit: "cover" }}
+        sx={{
+          objectFit: "cover",
+          transition: "opacity 1s",
+        }}
       />
+
       <CardContent>
         <Typography variant="body2" color="black" sx={{ fontWeight: "800" }}>
           <span>Precio: ${price}</span>
